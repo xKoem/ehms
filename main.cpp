@@ -38,6 +38,7 @@ string transactionsStudents(map<string, Student> studentsMap) {
         maxStudents--;
         Student st = studentsMap.at(highestID);
         studentsString += st.getAccountNumber() + "|Stypendium za wyniki w nauce; " + st.getName() + " " + st.getSurname() + "|700\n";
+        studentsMap.erase(highestID);
     }
 
     return studentsString;
